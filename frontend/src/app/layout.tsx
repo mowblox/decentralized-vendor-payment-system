@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import {Poltawski_Nowy, Poppins} from 'next/font/google'
+import { Poltawski_Nowy, Poppins } from 'next/font/google'
 import "./globals.css";
 
 const nowy = Poltawski_Nowy({
   variable: '--font-nowy',
-  weight: ['400', '500', '700'], 
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
 });
 
 const poppins = Poppins({
   variable: '--font-pop',
-  weight: ['300', '600'], 
+  weight: ['300', '600'],
   subsets: ['latin'],
 });
 
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className= {`${poppins.variable} ${nowy.variable} antialiased bg-grayTint dark:bg-dark `}
+        className={`${poppins.variable} ${nowy.variable} antialiased bg-grayTint dark:bg-dark `}
       >
         {children}
       </body>
