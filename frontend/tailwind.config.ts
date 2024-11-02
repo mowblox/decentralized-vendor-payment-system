@@ -27,6 +27,7 @@ const config: Config = {
         darkGrayHue: '#333333',
         gray: '#969696',
         grayTint: '#EFEFEF',
+        mouve:'#B78BF2'
       },
       animation: {
         flash: 'flash 2.5s infinite',

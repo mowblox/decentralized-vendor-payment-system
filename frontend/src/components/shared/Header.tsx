@@ -2,9 +2,9 @@ import React from 'react';
 import { Button, buttonVariants } from '../ui/button';
 import Image from 'next/image';
 import ThemeToggle from './ThemeToggle';
-import DarkLogo from '../../../public/images/logo/logo.png';
 import LightLogo from '../../../public/images/logo/logo1.png';
-
+import DarkLogo from '../../../public/images/logo/logo.png';
+import Link from 'next/link';
 
 interface HeaderProps {
   darkMode: boolean;
@@ -29,6 +29,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
         </div>
         <div className='flex flex-row items-center gap-5'>
           <ThemeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+          <Link href="/dashboard">
           <Button
             className={buttonVariants({
               size: "lg",
@@ -36,6 +37,7 @@ const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode }) => {
             })}>
             get started
           </Button>
+          </Link>
         </div>
       </div>
     </div>
