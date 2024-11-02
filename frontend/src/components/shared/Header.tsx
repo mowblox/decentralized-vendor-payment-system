@@ -2,9 +2,8 @@ import React from 'react';
 import { Button, buttonVariants } from '../ui/button';
 import Image from 'next/image';
 import ThemeToggle from './ThemeToggle';
-import DarkLogo from '../../../public/images/logo/logo.png';
 import LightLogo from '../../../public/images/logo/logo1.png';
-
+import DarkLogo from '../../../public/images/logo/logo.png';
 
 interface HeaderProps {
   darkMode: boolean;
