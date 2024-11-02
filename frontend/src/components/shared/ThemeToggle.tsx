@@ -1,5 +1,5 @@
+import { MoonIcon, SunIcon } from '@heroicons/react/16/solid';
 import React from 'react';
-import { Moon, Sun } from 'lucide-react';
 
 interface ThemeToggleProps {
   darkMode: boolean;
@@ -10,19 +10,18 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ darkMode, toggleDarkMode }) =
   return (
     <div 
       onClick={toggleDarkMode}
-      className="relative w-16 h-8 flex items-center dark:bg-dark bg-darkGray cursor-pointer rounded-full p-1 dark:border-light border"
+      className="relative w-16 h-8 flex items-center dark:bg-darkGrayHue bg-darkGray cursor-pointer rounded-full p-1 "
     >
-      <Moon 
-        className={`z-50 ${darkMode ? 'text-black' : 'text-white'}`} 
-        size={18} 
-      />
+<MoonIcon
+  className={`z-50 text-center ${darkMode ? 'text-black' : 'text-white'} h-10 `} 
+/>
+
       <div 
-        className="absolute bg-white dark:bg-primary w-7 h-7 rounded-full shadow-md transform transition-transform duration-300"
-        style={darkMode ? { left: '2px' } : { right: '2px' }}
+        className="absolute bg-primary  w-7 h-7 rounded-full shadow-md transform transition-transform duration-300"
+        style={darkMode ? { left: '3px' } : { right: '3px' }}
       />
-      <Sun 
-        className={`ml-auto z-50 ${darkMode ? 'text-white' : 'text-black'}`} 
-        size={18} 
+      <SunIcon 
+        className={`ml-auto z-50 text-center  ${darkMode ? 'text-white' : 'text-black'} h-10`} 
       />
     </div>
   );
