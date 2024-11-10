@@ -37,7 +37,9 @@ function PaymentCard() {
                  className:
                    "w-full text-[13px]  dark:border-light rounded-full font-pop capitalize py-6 sm:py-6 lg:py-6 px-4 sm:px-8 lg:px-5 md:text-[16px] sm:text-[18px] lg:text-[17px] border text-dark border-dark shadow-none bg-primary",
                })}
-                >Connect wallet to pay</Button>
+                >
+                    {isConnected ? ensName ?? truncatedAddress : 'Connect Wallet to pay'}
+                  </Button>
               )
             }}
          </ConnectKitButton.Custom>
