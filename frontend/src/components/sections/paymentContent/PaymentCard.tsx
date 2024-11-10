@@ -1,6 +1,9 @@
+'use client'
+
 import React from 'react'
 import DefaultText from '../landingPage/DefaultTititle'
 import { Button, buttonVariants } from '@/components/ui/button'
+import { ConnectKitButton } from 'connectkit'
 
 function PaymentCard() {
   return (
@@ -23,13 +26,21 @@ function PaymentCard() {
              <p className='text-light text-[13px] md:text-[16px] font-pop'>By Continuing <span className='text-mouve'>you agree to our terms and conditions</span></p>
           </div>
 
-          <Button
-         className={buttonVariants({
-          size: "sm",
-          className:
-            "w-full text-[13px]  dark:border-light rounded-full font-pop capitalize py-6 sm:py-6 lg:py-6 px-4 sm:px-8 lg:px-5 md:text-[16px] sm:text-[18px] lg:text-[17px] border text-dark border-dark shadow-none bg-primary",
-        })}
-         >Connect wallet to pay</Button>
+
+         <ConnectKitButton.Custom>
+            {({isConnected, show, truncatedAddress, ensName})=>{
+              return(
+                <Button
+                onClick={show}
+                className={buttonVariants({
+                 size: "sm",
+                 className:
+                   "w-full text-[13px]  dark:border-light rounded-full font-pop capitalize py-6 sm:py-6 lg:py-6 px-4 sm:px-8 lg:px-5 md:text-[16px] sm:text-[18px] lg:text-[17px] border text-dark border-dark shadow-none bg-primary",
+               })}
+                >Connect wallet to pay</Button>
+              )
+            }}
+         </ConnectKitButton.Custom>
 
         </div>
       </div>
