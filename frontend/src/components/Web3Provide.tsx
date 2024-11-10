@@ -15,7 +15,7 @@ const config = createConfig(
     transports: {
       // RPC URL for each chain
       [mainnet.id]: http(
-        ` https://ethereum-rpc.publicnode.com/${process.env.NEXT_PUBLIC_ALCHEMY_ID}`,
+        ` https://ethereum-rpc.publicnode.com/${process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID}`,
       ),
     },
 
