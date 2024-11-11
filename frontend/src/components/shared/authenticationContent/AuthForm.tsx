@@ -1,5 +1,4 @@
 'use client'
-import { useState } from "react"
 import GoogleButton from "./GoogleButton";
 import WalletButton from "./WalletButton";
 import Divider from "./Divider";
@@ -14,8 +13,8 @@ interface AuthProps {
 
 function AuthForm({ isLogin }: AuthProps) {
   return (
-    <div className="h-auto flex items-center flex-col justify-center py-10 bg-darkGray w-96 p-6 rounded-lg shadow-lg">
-      <h1 className="text-[35px] font-semibold mb-4 dark:text-light font-nowy">
+    <div className="h-auto flex items-center flex-col justify-center py-10 dark:bg-darkGray dark:text-light w-96 p-6 rounded-lg shadow-lg">
+      <h1 className="text-[35px] font-semibold mb-5 dark:text-light font-nowy">
         Join <span className="uppercase ">Payflow!</span>
       </h1>
       
@@ -26,18 +25,18 @@ function AuthForm({ isLogin }: AuthProps) {
         <WalletButton />
       </div>
 
-      {/* Conditional Text for Login/Register */}
-      <p className="text-sm">
+ 
+      <p className="text-sm mt-5 dark:text-light ">
         {isLogin ? (
-          <>
+          <div className="text-[15px] font-pop">
             Don't have an account?{' '}
-            <span className="text-blue-600 cursor-pointer">Sign Up</span>
-          </>
+            <span className="text-mouve font-extrabold cursor-pointer">Sign Up</span>
+          </div>
         ) : (
-          <>
+          <div className="text-[15px] font-pop">
             Already have an account?{' '}
-            <span className="text-blue-600 cursor-pointer">Login</span>
-          </>
+            <span className="cursor-pointer text-mouve font-extrabold">Login</span>
+          </div>
         )}
       </p>
     </div>
