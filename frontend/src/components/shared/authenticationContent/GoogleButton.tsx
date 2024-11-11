@@ -12,7 +12,7 @@ function GoogleButton() {
 
   const handleAuthClick=()=>{
     if(session){
-      signOut
+      signOut()
     }else{
       signIn('google')
     }

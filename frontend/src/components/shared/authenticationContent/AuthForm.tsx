@@ -29,7 +29,7 @@ function AuthForm({ isLogin }: AuthProps) {
       <p className="text-sm mt-5 dark:text-light ">
         {isLogin ? (
           <div className="text-[15px] font-pop">
-            Don't have an account?{' '}
+            Don&apos;t have an account? {" "}
             <span className="text-mouve font-extrabold cursor-pointer">Sign Up</span>
           </div>
         ) : (
