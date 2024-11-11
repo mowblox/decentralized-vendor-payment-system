@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Poltawski_Nowy, Poppins } from 'next/font/google'
 import "./globals.css";
+import { Web3Provider } from "@/components/Web3Provide";
+import SessionWrapper from "@/components/SessionWrapper";
+
 
 const nowy = Poltawski_Nowy({
   variable: '--font-nowy',
@@ -29,7 +32,11 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${nowy.variable} antialiased bg-grayTint dark:bg-dark `}
       >
-        {children}
+        <Web3Provider>
+          <SessionWrapper>
+            {children}
+            </SessionWrapper>
+        </Web3Provider>
       </body>
     </html>
   );
