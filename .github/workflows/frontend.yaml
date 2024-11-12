@@ -19,10 +19,9 @@ jobs:
           node-version: '20.x'
       - run: npm install
       - run: npm run lint
-      - run: npm run build
   cd:
     needs: ci
-    if: github.repository == 'mowblox/decentralized-vendor-payment-system'
+    if: github.repository == 'mowblox/payflow'
     runs-on: ubuntu-latest
     defaults:
       run:
